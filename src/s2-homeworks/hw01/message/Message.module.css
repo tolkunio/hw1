@@ -1,17 +1,22 @@
 .message {
-
+    display: flex;
+    margin: 15px;
 }
-
+.avatar{
+    height: 60px;
+    width: 60px;
+    border-radius: 40%;
+}
 .imageAndText {
-
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 200px;
+    background-color:lightgoldenrodyellow;
 }
-
-.imageAndText img {
-
-}
-
 .text {
-
+    min-width: 120px;
+    min-height: 120px;
 }
 
 .text:after {
@@ -19,13 +24,26 @@
 }
 
 .name {
-
+    font-size: 15px;
+    font-weight: bold;
+    color: darkslategrey;
 }
 
 .messageText {
-
+    min-width: 150px;
+    min-height: 150px;
+    font-size: 12px;
+    font-weight: normal;
 }
 
 .time {
+    align-items: end;
+    text-align: right;
+    font-size: 12px;
+    color: black;
+}
+
+
+.imageAndText img {
 
 }

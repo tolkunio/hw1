@@ -3,17 +3,13 @@
 }
 
 .hw {
-background-color: #3D3D3D;
+    background-color: dimgray;
+    display: flex;
+    flex-direction: column;
 }
 
 .hwTitle {
-    position: absolute;
-    /*width: 482px;*/
-    /*height: 88px;*/
+    background-color: beige;
     font-family: 'Montserrat';
-    /*font-style: normal;*/
-    /*font-weight: 600;*/
-    /*font-size: 20px;*/
-    /*line-height: 88px;*/
-    color: #FFFFFF;
+    font-weight: normal;
 }
