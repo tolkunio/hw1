@@ -1,9 +1,10 @@
-import React from 'react'
-import Message from './message/Message'
-import MessageSender from './message-sender/MessageSender'
-import s2 from '../../s1-main/App.module.css'
-import FriendMessage from './friend-message/FriendMessage'
-import avatar from './avatar.png'
+import React from 'react';
+import Message from './message/Message';
+import MessageSender from './message-sender/MessageSender';
+import s2 from '../../s1-main/App.module.css';
+import FriendMessage from './friend-message/FriendMessage';
+import girl_avatar from './girl_avatar.png';
+import man_avatar from './man_avatar.png';
 
 /*
 * 1 - описать тип MessageType
@@ -31,8 +32,8 @@ type messageContentType={
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        avatar: girl_avatar, // можно менять
+        name: 'Собедник #1',  // можно менять
     },
     message: {
         text: 'Привет, как дела?', // можно менять
@@ -42,8 +43,8 @@ export const message0: MessageType = {
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: man_avatar, // можно менять
+        name: 'Собеседник #2', // можно менять
     },
     message: {
         text: 'Все хорошо, учусь!', // можно менять
