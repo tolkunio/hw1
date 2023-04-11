@@ -2,6 +2,7 @@
 }
 
 .inputAndButtonContainer {
+
 }
 
 .error {
@@ -17,6 +18,8 @@
 }
 
 .button {
+    font-size: 10px;
+    background-color: #008CBA;
 }
 
 .button:focus {
