@@ -12,7 +12,6 @@ const Stand = () => {
 
     return (
         <div id={'hw4-stand'} className={s.stand}>
-            <h3>Hello</h3>
             <div className={s.inputs}>
                 {/*совместим со старым кодом:*/}
                 <div>
