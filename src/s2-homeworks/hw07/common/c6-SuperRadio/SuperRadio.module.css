@@ -1,4 +1,5 @@
 .radio {
+    margin: 0.5rem;
 }
 
 .radio::before {
@@ -6,9 +7,16 @@
 
 
 .radio:checked::before {
+    background: #0DFF92;
 }
 
 .label {
+    padding: 8px;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 .options {
