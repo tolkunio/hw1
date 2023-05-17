@@ -5,6 +5,7 @@ type ActionType =
     | { type: 'check'; payload: number }
 
 export const homeWorkReducer = (state: UserType[], action: ActionType): any => { // need to fix any
+    const newState = [...state];
     const sortByNameUpCallback = (name1: string, name2: string) => {
         if (name1 < name2) {
             return -1;
@@ -27,20 +28,19 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): any => {
     }
     switch (action.type) {
         case 'sort': { // by name
-            let sortedUsers:UserType[]=[];
             if (action.payload == 'up') {
-                sortedUsers = state.sort((a,b)=>sortByNameUpCallback(a.name,b.name));
+                newState.sort((a,b)=>sortByNameUpCallback(a.name,b.name));
             }
             if (action.payload == 'down') {
-                sortedUsers = state.sort((a, b)=>sortByNameDownCallback(a.name,b.name));
+                newState.sort((a, b)=>sortByNameDownCallback(a.name,b.name));
             }
 
-            return sortedUsers // need to fix
+            return newState // need to fix
         }
         case 'check': {
-           return state.filter(u=>u.age>action.payload)
+           return newState.filter(u=>u.age>action.payload)
         }
         default:
-            return state
+            return newState
     }
 }
