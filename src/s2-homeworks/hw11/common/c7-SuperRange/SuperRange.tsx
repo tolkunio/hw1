@@ -4,8 +4,11 @@ import {Slider, SliderProps} from '@mui/material'
 const SuperRange: React.FC<SliderProps> = (props) => {
     return (
         <Slider
+            aria-label="Temperature"
+            marks
             sx={{ // стили для слайдера // пишет студент
-                
+                width: '300px',
+                height: '5px',
             }}
             {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
         />
