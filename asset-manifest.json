@@ -1,10 +1,14 @@
 {
   "files": {
     "main.css": "/hw1/static/css/main.2105664a.css",
-    "main.js": "/hw1/static/js/main.c5e4efe7.js",
+    "main.js": "/hw1/static/js/main.ed014c1d.js",
     "static/js/787.66cb4309.chunk.js": "/hw1/static/js/787.66cb4309.chunk.js",
     "static/media/girl_avatar.png": "/hw1/static/media/girl_avatar.ea7440ec1481331962ab.png",
     "static/media/man_avatar.png": "/hw1/static/media/man_avatar.1fd5d6de7ff1a5182521.png",
+    "static/media/200.svg": "/hw1/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
+    "static/media/error.svg": "/hw1/static/media/error.5a3135f381b00b53044eff200e725391.svg",
+    "static/media/500.svg": "/hw1/static/media/500.adbc5f265f6f3c1fb9c5633ffe365afa.svg",
+    "static/media/400.svg": "/hw1/static/media/400.8baa1b795048b6fa13ff8d30800aa1b1.svg",
     "static/media/404.svg": "/hw1/static/media/404.9ec31c0ba8d95b0480272e46af98c955.svg",
     "static/media/closeOutline.svg": "/hw1/static/media/closeOutline.c72b988e4e101ef7ff518ed07f12ca17.svg",
     "static/media/editIcon.svg": "/hw1/static/media/editIcon.0a0cefd2190b593b4f76bb1a5afe0c1f.svg",
@@ -12,11 +16,11 @@
     "index.html": "/hw1/index.html",
     "static/media/burger.svg": "/hw1/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
     "main.2105664a.css.map": "/hw1/static/css/main.2105664a.css.map",
-    "main.c5e4efe7.js.map": "/hw1/static/js/main.c5e4efe7.js.map",
+    "main.ed014c1d.js.map": "/hw1/static/js/main.ed014c1d.js.map",
     "787.66cb4309.chunk.js.map": "/hw1/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2105664a.css",
-    "static/js/main.c5e4efe7.js"
+    "static/js/main.ed014c1d.js"
   ]
 }
