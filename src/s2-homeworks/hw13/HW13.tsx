@@ -19,7 +19,7 @@ const HW13 = () => {
     const [text, setText] = useState('')
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
-    const [isLoading,setLoading]=useState(false);
+    const infoText='...loading';
 
     const send = (x?: boolean | null) => () => {
         const url =
@@ -30,40 +30,35 @@ const HW13 = () => {
         setCode('');
         setImage('');
         setText('');
-        setInfo('...loading');
-        setLoading(true);
+        setInfo(infoText);
 
         axios
             .post(url, {success: x})
             .then((res) => {
-                setCode('Код 200!')
+                setCode(`Код ${res.status}`)
                 setImage(success200)
                 setText(res.data.errorText)
                 setInfo(res.data.info)
-                setTimeout(()=>{
-                    setLoading(false);
-                },2000)
 
             })
             .catch((e) => {
-                // дописать
-                setTimeout(() => {
-                    setLoading(false)
-                }, 2000)
-                setImage(errorUnknown)
-                setCode(e.message)
-                setInfo('Error')
-                if (e.response.status === 500) {
+                if (e.code === 'ERR_BAD_RESPONSE') {
+                    setCode(`Код${e.response.status}`)
                     setImage(error500)
-                    setCode(e.message)
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
                 }
-                if (e.response.status === 400) {
+                if (e.code === 'ERR_BAD_REQUEST') {
+                    setCode(`Код${e.response.status}`)
                     setImage(error400)
-                    setCode(e.message)
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
+                }
+                if (e.code === 'ERR_NETWORK') {
+                    setCode(`Error`)
+                    setImage(errorUnknown)
+                    setText(e.message)
+                    setInfo(e.name)
                 }
             })
     }
@@ -78,7 +73,7 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
-                        disabled={isLoading}
+                        disabled={info===infoText}
 
                     >
                         Send true
@@ -87,7 +82,7 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
-                        disabled={isLoading}
+                        disabled={info===infoText}
 
                     >
                         Send false
@@ -96,8 +91,7 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
-                        disabled={isLoading}
-
+                        disabled={info===infoText}
                     >
                         Send undefined
                     </SuperButton>
@@ -105,7 +99,7 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
-                        disabled={isLoading}
+                        disabled={info===infoText}
 
                     >
                         Send null
